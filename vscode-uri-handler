@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+REQUEST="$1"
+CODE=`which code`
+
+if [ -z "$CODE" ]; then
+    echo "Code not found in PATH."
+    exit -1
+fi
+
+"$CODE" --open-url "$REQUEST"
